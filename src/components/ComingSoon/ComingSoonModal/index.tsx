@@ -14,6 +14,7 @@ const ComingSoonModal = (props: ModalProps) => {
     });
     if (docRef.id != null) {
       toast.success("You'll be notified once our site is live!");
+      props.closeModal();
     }
   };
   return (
