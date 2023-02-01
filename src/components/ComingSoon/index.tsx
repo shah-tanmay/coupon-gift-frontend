@@ -46,7 +46,11 @@ const ComingSoon = () => {
             We will be celebrating the launch of our new site very soon!
           </div>
           <div className="mt-5">
-            <Button text="Notify Me!" onClick={() => setIsOpen(true)} />
+            <Button
+              text="Notify Me!"
+              onClick={() => setIsOpen(true)}
+              className={`${isOpen && "-z-10 relative"}`}
+            />
             <ComingSoonModal
               isOpen={isOpen}
               closeModal={() => setIsOpen(false)}
