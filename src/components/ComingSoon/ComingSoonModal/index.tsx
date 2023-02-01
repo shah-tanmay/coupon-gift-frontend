@@ -9,6 +9,10 @@ import CustomModal, { ModalProps } from "../../Modal";
 const ComingSoonModal = (props: ModalProps) => {
   const [email, setEmail] = useState<string>("");
   const getEmail = async () => {
+    if (email === "") {
+      toast.error("Email is required");
+      return;
+    }
     const docRef = await addDoc(collection(db, "coming-soon-mails"), {
       email,
     });
@@ -30,6 +34,7 @@ const ComingSoonModal = (props: ModalProps) => {
           placeholder="Enter your email here."
           className="my-5"
           onChange={(e: any) => setEmail(e.target.value)}
+          type="email"
         />
         <div className="lg:pb-3 md:pb-5 pb-16">
           <Button text="Subscribe Now" onClick={getEmail} />

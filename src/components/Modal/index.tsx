@@ -21,7 +21,7 @@ const CustomModal = ({
       bottom: "auto",
       marginRight: "-50%",
       transform: "translate(-50%,-50%)",
-      border: "5px solid #00e5c9",
+      border: "5px solid #00bbff",
       borderBottom: `${width! <= 768 ? "0px" : "5px solid #000e5c9"}`,
       width: `${width! <= 768 ? "100%" : ""}`,
     },

@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes } from "react";
+import styles from "./button.module.scss";
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   text: string;
@@ -8,7 +9,7 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 const Button = ({ text, className, ...props }: ButtonProps) => {
   return (
     <button
-      className={`bg-[#00e5c9] text-white font-serif px-5 py-3 text-[20px] hover:bg-[#14a291] ${className}`}
+      className={`${styles.button} text-white font-serif px-5 py-3 text-[20px] ${className}`}
       {...props}
     >
       {text}
