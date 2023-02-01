@@ -40,7 +40,7 @@ const Socials = () => {
         return (
           <Icon
             onClick={() => window.open(social.link, "_blank")}
-            size={width! <= 500 ? 20 : 30}
+            size={width! <= 320 ? 20 : width! <= 500 ? 25 : 30}
             className="cursor-pointer text-teal-800"
           />
         );
