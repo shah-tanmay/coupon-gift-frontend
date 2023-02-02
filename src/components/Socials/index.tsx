@@ -1,46 +1,49 @@
-import FacebookIcon from "remixicon-react/FacebookBoxLineIcon";
-import InstagramIcon from "remixicon-react/InstagramLineIcon";
-import LinkedinIcon from "remixicon-react/LinkedinBoxLineIcon";
-import PinterestIcon from "remixicon-react/PinterestLineIcon";
-import TwitterIcon from "remixicon-react/TwitterLineIcon";
-import YouTubeIcon from "remixicon-react/YoutubeLineIcon";
-import WhatsappIcon from "remixicon-react/WhatsappLineIcon";
-import MailIcon from "remixicon-react/MailLineIcon";
-import { RemixiconReactIconComponentType } from "remixicon-react";
 import useWindowSize from "../hooks/useWindowSize";
 
 const Socials = () => {
   const socialsArray: {
-    icon: RemixiconReactIconComponentType;
+    icon: string;
     link: string;
   }[] = [
-    { icon: FacebookIcon, link: "https://www.facebook.com/makoonsplayschool" },
-    { icon: InstagramIcon, link: "https://instagram.com/makoonsplayschool" },
     {
-      icon: LinkedinIcon,
+      icon: "/socials/facebook.png",
+      link: "https://www.facebook.com/makoonsplayschool",
+    },
+    {
+      icon: "/socials/insta.png",
+      link: "https://instagram.com/makoonsplayschool",
+    },
+    {
+      icon: "/socials/linkedin.png",
       link: "https://www.linkedin.com/company/makoons-play-school",
     },
     {
-      icon: PinterestIcon,
+      icon: "/socials/pinterest.png",
       link: "https://www.pinterest.com/Makoonsplayschool",
     },
-    { icon: TwitterIcon, link: "https://twitter.com/makoonsschool" },
-    { icon: YouTubeIcon, link: "https://www.youtube.com/makoonsplayschool" },
+    { icon: "/socials/twitter.png", link: "https://twitter.com/makoonsschool" },
     {
-      icon: WhatsappIcon,
+      icon: "/socials/youtube.png",
+      link: "https://www.youtube.com/makoonsplayschool",
+    },
+    {
+      icon: "/socials/whatsapp.png",
       link: "https://api.whatsapp.com/send?phone=919821182455",
     },
-    { icon: MailIcon, link: "mailto:info@makoons.com" },
+    { icon: "/socials/gmail.png", link: "mailto:info@makoons.com" },
   ];
   const { width } = useWindowSize();
   return (
     <div className="max-w-screen flex justify-center gap-4 mt-5">
       {socialsArray.map((social) => {
-        const Icon = social.icon;
         return (
-          <Icon
+          <img
+            src={social.icon}
+            key={social.link}
             onClick={() => window.open(social.link, "_blank")}
-            size={width! <= 320 ? 20 : width! <= 500 ? 25 : 30}
+            height={width! <= 320 ? 20 : width! <= 500 ? 25 : 30}
+            width={width! <= 320 ? 20 : width! <= 500 ? 25 : 30}
+            alt="social-icon"
             className="cursor-pointer text-teal-800"
           />
         );
