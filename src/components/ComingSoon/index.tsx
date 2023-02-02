@@ -29,7 +29,7 @@ const ComingSoon = () => {
   return (
     <>
       <div className="h-screen w-screen grid place-items-center text-center">
-        <div className="absolute">
+        <div className="absolute w-screen h-screen">
           <div className="md:w-[500px] w-[300px] md:h-[500px] h-[500px]">
             <Lottie options={rocketDefaultOptions} />
           </div>
