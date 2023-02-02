@@ -38,6 +38,11 @@ const ComingSoon = () => {
         </div>
         <Lottie options={confettiDefaultOptions} />
         <div className="absolute w-screen grid place-items-center">
+          <img
+            src="/logo.png"
+            height={width! <= 430 ? 300 : 400}
+            width={width! <= 430 ? 300 : 400}
+          />
           <div className="uppercase lg:text-[100px] md:text-[70px] text-[50px] font-bold text-center font-serif">
             Coming <br />
             Soon
