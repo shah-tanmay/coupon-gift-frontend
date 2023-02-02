@@ -30,11 +30,9 @@ const ComingSoon = () => {
     <>
       <div className="h-screen w-screen grid place-items-center text-center">
         <div className="absolute">
-          <Lottie
-            options={rocketDefaultOptions}
-            height={width! <= 768 ? 300 : 500}
-            width={width! <= 768 ? 300 : 500}
-          />
+          <div className="md:w-[500px] w-[300px] md:h-[500px] h-[500px]">
+            <Lottie options={rocketDefaultOptions} />
+          </div>
         </div>
         <Lottie options={confettiDefaultOptions} />
         <div className="absolute w-screen grid place-items-center">
