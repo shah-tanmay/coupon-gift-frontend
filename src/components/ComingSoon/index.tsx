@@ -37,32 +37,36 @@ const ComingSoon = () => {
         <div className="absolute w-screen h-screen">
           <Lottie options={confettiDefaultOptions} />
         </div>
-        <div className="absolute w-screen grid place-items-center">
-          <img
-            src="/logo.png"
-            height={width! <= 430 ? 300 : 400}
-            width={width! <= 430 ? 300 : 400}
-            alt="logo"
-          />
-          <div className="uppercase lg:text-[100px] md:text-[70px] text-[50px] font-bold text-center font-serif">
-            Coming <br />
-            Soon
+        <div className="absolute w-screen grid place-items-center h-screen">
+          <div className="flex flex-col">
+            <div className="w-full flex justify-center">
+              <img
+                src="/logo.png"
+                height={width! <= 430 ? 300 : 400}
+                width={width! <= 430 ? 300 : 400}
+                alt="logo"
+              />
+            </div>
+            <div className="uppercase lg:text-[100px] md:text-[70px] text-[50px] font-bold text-center font-serif">
+              Coming <br />
+              Soon
+            </div>
+            <div className="lg:text-[35px] md:text-[30px] text-[22px] font-thin">
+              We will be celebrating the launch of our new site very soon!
+            </div>
+            <div className="mt-5">
+              <Button
+                text="Notify Me!"
+                onClick={() => setIsOpen(true)}
+                className={`${isOpen && "-z-10 relative"}`}
+              />
+              <ComingSoonModal
+                isOpen={isOpen}
+                closeModal={() => setIsOpen(false)}
+              />
+            </div>
+            <Socials />
           </div>
-          <div className="lg:text-[35px] md:text-[30px] text-[22px] font-thin">
-            We will be celebrating the launch of our new site very soon!
-          </div>
-          <div className="mt-5">
-            <Button
-              text="Notify Me!"
-              onClick={() => setIsOpen(true)}
-              className={`${isOpen && "-z-10 relative"}`}
-            />
-            <ComingSoonModal
-              isOpen={isOpen}
-              closeModal={() => setIsOpen(false)}
-            />
-          </div>
-          <Socials />
         </div>
       </div>
     </>
