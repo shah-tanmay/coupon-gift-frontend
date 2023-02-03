@@ -28,7 +28,7 @@ const ComingSoon = () => {
   const { width } = useWindowSize();
   return (
     <>
-      <div className="h-screen w-screen grid place-items-center text-center">
+      <div className="h-screen w-screen grid place-items-center text-center bg-[#fbe134]">
         {/* <div className="absolute"> */}
         <div className="md:w-[500px] w-[300px] md:h-[500px] h-[500px]">
           <Lottie options={rocketDefaultOptions} />
